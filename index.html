@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Blogr]</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="wrapper">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <img src="images/logo.svg" alt="Blogr logo." />
+        </a>
+
+        <!-- nav -->
+        <nav>
+          <!-- dropdown list -->
+          <ul class="dropdown-btns" aria-label="dropdown buttons">
+            <!-- dropdown -->
+            <li class="dropdown">
+              <button aria-label="dropdown button" class="dropdown-btn">
+                <span>Product</span>
+                <img src="images/icon-arrow-dark.svg" alt="" class="arrow" />
+              </button>
+
+              <!-- dropdown list -->
+              <div class="dropdown-content-wrapper">
+                <ul class="dropdown-content" aria-label="dropdown content.">
+                  <li>
+                    <a href="#">Overview</a>
+                  </li>
+                  <li>
+                    <a href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#">Marketplace</a>
+                  </li>
+                  <li>
+                    <a href="#">Features</a>
+                  </li>
+                  <li>
+                    <a href="#">Integrations</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- dropdown -->
+            <li class="dropdown">
+              <button aria-label="dropdown button" class="dropdown-btn">
+                <span>Company</span>
+                <img src="images/icon-arrow-dark.svg" alt="" class="arrow" />
+              </button>
+
+              <!-- dropdown list -->
+              <div class="dropdown-content-wrapper">
+                <ul class="dropdown-content" aria-label="dropdown content.">
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Team</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- dropdown -->
+            <li class="dropdown">
+              <button aria-label="dropdown button" class="dropdown-btn">
+                <span>Connect</span>
+                <img src="images/icon-arrow-dark.svg" alt="" class="arrow" />
+              </button>
+
+              <!-- dropdown list -->
+
+              <div class="dropdown-content-wrapper">
+                <ul class="dropdown-content" aria-label="dropdown content.">
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#">Newsletter</a>
+                  </li>
+                  <li>
+                    <a href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <!-- auth buttons -->
+          <ul class="auth-btns" aria-label="authentification buttons.">
+            <li>
+              <button class="login-btn">Login</button>
+            </li>
+            <li>
+              <button class="sign-up-btn">Sign Up</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- hamburger button -->
+        <button
+          class="hamburger-btn"
+          role="switch"
+          aria-expanded="false"
+        >
+          <img src="images/icon-hamburger.svg" alt="" class="open" />
+          <img src="images/icon-close.svg" class="close" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero-section" aria-label="hero section.">
+      <div class="wrapper">
+        <h1 class="heading">A modern publishing platform</h1>
+        <p class="intro-text">Grow your audience and build your online brand</p>
+        <!-- cta buttons -->
+        <div class="cta-btns">
+          <button class="cta start-free">Start for Free</button>
+          <button class="cta learn-more">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- design for future section -->
+    <section class="future-design-section">
+      <div class="wrapper">
+        <h2 class="heading">Designed for the future</h2>
+        <!-- left content -->
+        <div class="flex">
+          <div class="left-content">
+            <article>
+              <h3 class="heading">Introducing an extensible editor</h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </article>
+
+            <article>
+              <h3 class="heading">Robust content management</h3>
+              <p>
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you're in full control.
+              </p>
+            </article>
+          </div>
+          <!-- right content -->
+          <div class="right-content">
+            <picture>
+              <source
+                media="(max-width: 768px)"
+                srcset="images/illustration-editor-mobile.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="images/illustration-editor-desktop.svg"
+              />
+              <img
+                src="images/illustration-editor-mobile.svg"
+                alt="A tablet screen illustrating editing of content."
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- state of art section -->
+    <section class="state-of-art-section">
+      <div class="wrapper">
+        <!-- content-left -->
+        <div class="left-content">
+          <img
+            src="images/illustration-phones.svg"
+            alt="A mobile phone illustrating a webpage with fast loading time."
+          />
+        </div>
+        <!-- content-right -->
+        <div class="right-content">
+          <article>
+            <h2 class="heading">State of the Art Infrastructure</h2>
+            <p>
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- more description section -->
+    <section class="more-description-section">
+      <div class="wrapper">
+        <div class="left-content">
+          <picture>
+            <source
+              media="(max-width:768px)"
+              srcset="images/illustration-laptop-mobile.svg"
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="images/illustration-laptop-desktop.svg"
+            />
+            <img
+              src="images/illustration-laptop-mobile.svg"
+              alt="illustration of a laptop with a browser opened."
+            />
+          </picture>
+        </div>
+        <div class="right-content">
+          <article>
+            <h3 class="heading">Free, open, simple</h3>
+            <p>
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+          </article>
+
+          <article>
+            <h3 class="heading">Powerful tooling</h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <!-- footer content -->
+      <div class="wrapper">
+        <!-- logo -->
+        <a href="#" class="logo">
+          <img src="images/logo.svg" alt="Blogr logo." />
+        </a>
+        <!-- nav -->
+        <!-- primary nav -->
+        <div class="links">
+          <div class="primary-nav">
+            <h4 class="heading">Product</h4>
+            <nav aria-label="primary navigation">
+              <ul>
+                <li>
+                  <a href="#">Overview</a>
+                </li>
+                <li>
+                  <a href="#">Pricing</a>
+                </li>
+                <li>
+                  <a href="#">Marketplace</a>
+                </li>
+                <li>
+                  <a href="#">Features</a>
+                </li>
+                <li>
+                  <a href="#">Integrations</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- secondary nav-->
+          <div class="secondary-nav">
+            <h4 class="heading">Company</h4>
+            <nav aria-label="secondary navigation">
+              <ul>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Team</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- social nav -->
+          <div class="social-nav">
+            <h4 class="heading">Connect</h4>
+            <nav aria-label="social navigation.">
+              <ul>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Newsletter</a>
+                </li>
+                <li>
+                  <a href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- copyright -->
+      <p class="copyright-text">
+        &copy; <span id="copyright-year"></span> Blogr. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
