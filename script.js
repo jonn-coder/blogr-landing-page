@@ -12,22 +12,29 @@ const hamburgerBtnEl = document.querySelector(".hamburger-btn")
 const dropdownBtnEls = document.querySelectorAll(".dropdown-btn")
 
 document.addEventListener("click", (e) => {
-  // open nav
+  // open / close
   if (e.target.closest(".hamburger-btn")) {
-    openNav()
+    toggleNav()
   }
-  // close nav
-  else if (
+  // close nav if close btn got clicked 
+  // or outside nav got clicked
+  else if ((
     !e.target.closest(".hamburger-btn") &&
     !e.target.closest("nav") &&
-    hamburgerBtnEl.classList.contains("active")
+    hamburgerBtnEl.classList.contains("active")) || e.target.closest(".hamburger-btn .close")
   ) {
     closeNav()
+  }
+  // collapse all dropdown if user click ouside the dropdown
+  if (!e.target.closest('.dropdown')) {
+    dropdownBtnEls.forEach((button) =>
+      button.parentNode.classList.remove("active")
+    )
   }
 })
 
 // open nav func
-function openNav() {
+function toggleNav() {
   hamburgerBtnEl.setAttribute("aria-expanded", true)
   hamburgerBtnEl.classList.toggle("active")
   navEl.classList.toggle("active")
@@ -36,8 +43,8 @@ function openNav() {
 // close nav func
 function closeNav() {
   hamburgerBtnEl.setAttribute("aria-expanded", false)
-  hamburgerBtnEl.classList.toggle("active")
-  navEl.classList.toggle("active")
+  hamburgerBtnEl.classList.remove("active")
+  navEl.classList.remove("active")
 }
 
 // open / close dropdoen func
@@ -64,10 +71,9 @@ dropdownBtnEls.forEach((btn) => {
     if(btn.parentNode.classList.contains('active')){
       return
     }
-    else if(!btn.parentNode.classList.contains('active')) {
       dropdownBtnEls.forEach((button) =>
         button.parentNode.classList.remove("active")
       )
-    }
+
   })
 })
