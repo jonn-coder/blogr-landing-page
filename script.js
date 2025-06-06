@@ -74,6 +74,6 @@ dropdownBtnEls.forEach((btn) => {
       dropdownBtnEls.forEach((button) =>
         button.parentNode.classList.remove("active")
       )
-
+  btn.focus()
   })
 })
