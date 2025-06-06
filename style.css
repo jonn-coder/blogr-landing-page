@@ -156,7 +156,8 @@ header nav .dropdown-btn:hover {
   color: var(--Gray-600);
 }
 
-header nav .dropdown:hover .arrow {
+header nav .dropdown:hover .arrow,
+header nav .dropdown.active .arrow {
   transform: rotate(-180deg);
 }
 
@@ -585,7 +586,8 @@ footer .copyright-text {
     color: var(--White);
   }
 
-  header nav .dropdown-btn:hover {
+  header nav .dropdown-btn:hover,
+  header nav .dropdown.active .dropdown-btn {
     color: var(--White);
     text-decoration: solid underline;
   }
